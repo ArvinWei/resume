@@ -1,3 +1,4 @@
+
 body{
     background: #ececec;
     margin: 0;
@@ -277,13 +278,15 @@ body > main .downloadResume:hover{
 }
 
 section.skills,
+section.message ,
 section.portfolio {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
 }
-section.skills >h2,
+section.skills > h2,
+section.message > h2,
 section.portfolio >h2 {
     text-align: center;
     color:#3d4451;
@@ -333,7 +336,8 @@ section.portfolio{
     margin-bottom: 100px;
     max-width: 840px;
 }
-section.portfolio h2{
+section.portfolio h2,
+section.message h2{
     margin-bottom: 32px;
 }
 section.portfolio .swiper-container {
@@ -358,6 +362,16 @@ section.portfolio .swiper-button-next{
 section.portfolio .swiper-button-next{
     left: 100%;
     right: auto;
+}
+
+section.message > ol{
+    max-width: 700px;
+    margin: 0 auto;
+    border-top: 1px solid #DDD;
+}
+section.message > ol >li {
+    padding: 16px;
+    border-bottom: 1px solid #DDD;
 }
 
 
