@@ -1,4 +1,5 @@
-!function(){
+
+! function(){
   var model = {
     // 获取数据
     init: function(){
@@ -51,11 +52,13 @@
       )
     },
     bindEvents: function(){
+      let _this = this;
       this.form.addEventListener('submit', function(e){
         e.preventDefault()
-        this.saveMessage()
+        _this.saveMessage()
       })
     },
+
     saveMessage: function(){
       let myForm = this.form
       let content = myForm.querySelector('input[name=content]').value
@@ -76,55 +79,4 @@
 
 
 }.call()
-/*
-
-var APP_ID = 'gHMOm7VinvnlhdApv0ewwGMr-gzGzoHsz';
-var APP_KEY = 'PNqg6CmtkIEWlI9A3iKjjuWy';
-
-AV.init({
-  appId: APP_ID,
-  appKey: APP_KEY
-});
-/*
-var TestObject = AV.Object.extend('TestObject');
-var testObject = new TestObject();
-testObject.save({
-  words: 'Hello World!'
-}).then(function(object) {
-  alert('LeanCloud Rocks!');
-})
-*/
-/*
-var query = new AV.Query('Message');
-query.find()
-  .then(
-     function(message){
-     	let array = message.map((item)=> item.attributes)
-     	array.forEach((item)=>{
-     		let li = document.createElement('li')
-     		li.innerText = `${item.name}: ${item.content}`
-     		let messageList = document.querySelector('#messageList')
-     		messageList.appendChild(li)
-        })
-     }
-  	)
-
-let myForm = document.querySelector('#postMessageForm')
-
-myForm.addEventListener('submit', function(e){
-	e.preventDefault()
-	let content = myForm.querySelector('input[name=content]').value
-	let name = myForm.querySelector('input[name=name]').value
-	var Message = AV.Object.extend('Message');
-	var message = new Message();
-	message.save({
-		'name': name,
-		'content': content
-    }).then(function(object){
-    	let li = document.createElement('li')
-     		li.innerText = `${object.attributes.name}: ${object.attributes.content}`
-     		let messageList = document.querySelector('#messageList')
-     		messageList.appendChild(li)
-    	alert('您的留言已收到，空闲时会给您回复，谢谢！')
-    })
-})*/
+ 
