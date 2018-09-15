@@ -52,10 +52,9 @@
       )
     },
     bindEvents: function(){
-      let _this = this;
-      this.form.addEventListener('submit', function(e){
+      this.form.addEventListener('submit', (e)=>{
         e.preventDefault()
-        _this.saveMessage()
+        this.saveMessage()
       })
     },
 
